@@ -44,7 +44,8 @@
     (doto res
       (.setRequestedChannelMax (:requested-channel-max cfg))
       (.setRequestedFrameMax (:requested-frame-max cfg))
-      (.setRequestedHeartbeat (:requested-heartbeat cfg)))))
+      (.setRequestedHeartbeat (:requested-heartbeat cfg))
+      ((or (:configurator config) identity)))))
 
 (defn- ^Connection make-connection [{addrs :addresses :as config}]
   (let [factory (connection-factory config)]
