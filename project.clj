@@ -1,4 +1,4 @@
-(defproject com.mefesto/wabbitmq "0.3.0-draker"
+(defproject rplevy-draker/wabbitmq "0.3.0"
   :description "WabbitMQ: A simple RabbitMQ wrapper for Clojure"
   :url "https://github.com/mefesto/wabbitmq"
   :license {:name "Eclipse Public License - v 1.0"
