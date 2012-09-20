@@ -14,8 +14,9 @@
 (defn do-connect [f]
   (with-broker {:host "localhost"
                 :username "guest"
-                :password "guest"
-                :virtual-host "test"}
+                :virtual-host "test"
+                :configurator (fn [factory] (doto factory
+                                              (.setPassword "guest")))}
     (with-channel {:content-types [text-plain
                                    application-json
                                    application-clojure]}
